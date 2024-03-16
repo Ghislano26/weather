@@ -1,0 +1,329 @@
+/* @import url('https://fonts.googleapis.com/css2? family= Poppins:wght@300 & family= Roboto:wght@300 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300;500&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:wght@300&family=Roboto:wght@300;500&family=Tilt+Neon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:wght@300&family=Roboto:wght@300;500&family=Tilt+Neon&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inika&family=Newsreader:ital,wght@0,400;0,600;1,200;1,400;1,600&family=Noto+Sans:wght@400;600&family=Oswald:wght@400;600&family=Roboto:wght@400;700&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,200;1,400;1,600&family=Noto+Sans:wght@400;600&family=Oswald:wght@400;600&family=Roboto:wght@400;700&family=Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  /* police d'ecriture des grands titres */
+  --titleHeadFont: "Roboto", sans-serif;
+  --text-font: "Josefin Sans", sans-serif;;
+  --H1-font: "Newsreader", serif;
+  --name_font: "Tilt Neon", sans-serif;
+  --ico_font: "Young Serif", serif;
+  --gradient: linear-gradient(160deg, rgba(0, 0, 0, 0.95)0%, rgba(0, 0, 0, 0.3));
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
+  background: var(--gradient), url("/img/montagne.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: animeBackground 5s cubic-bezier(1, 0, 0, 1) infinite;
+}
+/* @keyframes animeBackground {
+  0% {
+    background-image: url("img/meteo4.jpg");
+  }
+  100% {
+    background-image: url("img/meteo3.jpg");
+  }
+} */
+.container {
+  width: 100vw;
+  height: 135vh;
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+.container__logo {
+  width: 100vw;
+  height: 20rem;
+  padding: 1rem;
+  background: var(--gradient);
+  font-size: 1.2rem;
+  font-family: var(--text-font);
+}
+.container__logo img {
+  width: 10rem;
+  height: 10rem;
+  animation: logoAnimation 2s ease;
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container__find {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  font-size: 2.9rem;
+  color: rgba(255, 255, 255, 0.774);
+  font-family: var(--text-font);
+}
+::placeholder {
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: var(--text-font);
+}
+input[type="text"] {
+  width: 45rem;
+  height: 5rem;
+  border: none;
+  box-shadow: 0 0 12px black, 0 0 12px black, 0 0 12px black, 0 0 12px black;
+  border-radius: 1.5rem;
+  transition: 0.25s ease-in;
+  /* outline: none; */
+  outline-color: rgba(3, 3, 98, 0.719);
+  padding: 0 2rem;
+  color: white;
+  font-family: var(--text-font);
+}
+input[type="text"]:hover {
+  /* transform: scale(1.1); */
+  background-color: transparent;
+}
+input[type="submit"] {
+  width: 15rem;
+  height: 5rem;
+  border: none;
+  margin-top: 3rem;
+  border-radius: 1.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background: linear-gradient(11deg, rgb(2, 2, 7), rgb(62, 61, 61));
+  transition: 0.25s ease-in;
+  color: white;
+  font-family: var(--text-font);
+}
+input[type="submit"]:hover {
+  transform: scale(1.1);
+}
+
+.container__meteo {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container__meteo__main {
+  width: 40%;
+  height: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.box {
+  width: 20rem;
+  height: 20rem;
+  border: 1px solid black;
+  border-radius: 1.3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  transition: 0.25s ease-in;
+  cursor: pointer;
+  border: none;
+}
+.box:hover {
+  transform: scale(1.1);
+}
+.container__meteo__city {
+  background-color: rgba(6, 91, 139, 0.3);
+  font-family: var(--text-font);
+}
+.container__meteo__tmp {
+  background-color: rgba(7, 28, 49, 0.3);
+  font-family: var(--text-font);
+}
+.container__meteo__humid {
+  background-color: rgba(8, 27, 114, 0.3);
+  font-family: var(--text-font);
+}
+.container__meteo__vent {
+  background-color: rgba(224, 126, 126, 0.3);
+  font-family: var(--text-font);
+}
+
+@media only screen and (max-width: 1010px) {
+  .container__meteo__main {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .container__meteo__main {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .container__meteo__main {
+    width: 70%;
+  }
+  .container__find {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .container__meteo__main {
+    width: 80%;
+  }
+  .container__find {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container__meteo__main {
+    width: 90%;
+  }
+  .container__find {
+    font-size: 2rem;
+  }
+  input[type="text"] {
+    width: 35rem;
+  }
+}
+@media only screen and (max-width: 443px) {
+  .container__meteo__main {
+    width: 95%;
+  }
+  .container__find {
+    font-size: 2rem;
+  }
+  input[type="text"] {
+    width: 35rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  .container__logo {
+    padding: 0.2rem;
+  }
+  .container__logo img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .container__meteo {
+    font-size: 1.3rem;
+  }
+  .box {
+    width: 15rem;
+    height: 15rem;
+  }
+  input[type="text"] {
+    margin-left: 1rem;
+    width: 30rem;
+  }
+  .container__meteo {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .container__meteo__main {
+    width: 80%;
+    height: 45%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .container__logo {
+    padding: 0rem;
+  }
+
+  .container__logo img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .container__meteo {
+    font-size: 1.3rem;
+  }
+  .box {
+    width: 15rem;
+    height: 15rem;
+  }
+  input[type="text"] {
+    margin-left: 1rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .container__meteo__main {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  .container__meteo {
+    flex: 1;
+    font-size: 1.3rem;
+  }
+  .box {
+    width: 15rem;
+    height: 15rem;
+  }
+  input[type="text"] {
+    margin-left: 2rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .container__meteo__main {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  .container__meteo {
+    font-size: 1.3rem;
+  }
+  .box {
+    width: 15rem;
+    height: 15rem;
+  }
+  input[type="text"] {
+    margin-left: 1rem;
+    width: 23rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .box {
+    width: 13rem;
+    height: 13rem;
+  }
+}

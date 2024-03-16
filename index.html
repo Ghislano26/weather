@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Ellipse 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Weather API</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="container__logo">
+            <img src="img/Ellipse 1.png" alt="">
+            <h2>Ghislain <span class="nameChange"></span></h2>
+            <p>API METEO</p>
+        </div>
+
+        <div class="container__find">
+
+            <form action="">
+                <div class="">
+                    <h1>Find the weather forecast for your city</h1>
+                    <h3><span class="indication"></span></h3>
+                </div>
+                <div class="container__find__input">
+                    <input type="text" placeholder="Search a city or country in the world" id="city">
+                </div>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+
+        <div class="container__meteo">
+            <div class="container__meteo__main">
+                <div class="container__meteo__city box" id="ville">
+                    <!-- <h2>Yaounde</h2> -->
+                </div>
+                <div class="container__meteo__tmp box" id="tmp">
+                    <!-- <h2>32,65 °C</h2> -->
+                </div>
+                <div class="container__meteo__humid box" id="humid">
+                    <!-- <h2>12 %</h2> -->
+                </div>
+                <div class="container__meteo__vent box" id="vent">
+                    <!-- <h2>42 km/H</h2> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
